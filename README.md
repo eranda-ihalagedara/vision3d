@@ -1,7 +1,9 @@
 # Vision3D
 This is an attempt to give 3D effect to elements in a laptop screen, without 3D glasses.
-Inital inspiration is from the Mission: Impossible - Ghost Protocol hallway projection scene.
-[![Video](https://img.youtube.com/vi/7DkV8WE7DFA/hqdefault.jpg)](https://www.youtube.com/watch?v=7DkV8WE7DFA)
+Inital inspiration is from the Mission: Impossible - Ghost Protocol hallway projection scene.  
+
+[![Video](https://img.youtube.com/vi/7DkV8WE7DFA/hqdefault.jpg)](https://www.youtube.com/watch?v=7DkV8WE7DFA)  
+
 In summary, the perspective of elements in a webpage is changed based on the position a viewer is looking at, using the webcam.
 
 ## Demo
