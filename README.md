@@ -1,5 +1,5 @@
 # Vision3D
-This is an attempt to give 3D effect to element in a laptop screen, without 3D glasses.
+This is an attempt to give 3D effect to elements in a laptop screen, without 3D glasses.
 Inital inspiration is from the Mission: Impossible - Ghost Protocol hallway projection scene.
 
 In summary, the perspective of elements in a webpage is changed based on the position a viewer is looking at, using the webcam.
@@ -16,4 +16,4 @@ It detects 478 face landmarks in both images and videos. The model is small in s
 The 3D cube is created using CSS. See the 3D cube in this [repo](https://github.com/eranda-ihalagedara/web-development-mini-projects/tree/main/CSS%203D)
 
 ## References & Credits
-- MediaPipe : Credit goes to the MediaPipe Authors and creators of face/landmark detection models MediaPipe is based on.
+- [MediaPipe](https://developers.google.com/mediapipe) : Credit goes to the MediaPipe Authors and creators of face/landmark detection models MediaPipe is based on.
