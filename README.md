@@ -12,5 +12,5 @@ It detects 478 face landmarks in both images and videos. The model is small in s
 The 3D cube is created using CSS. See the 3D cube in this [repo](https://github.com/eranda-ihalagedara/web-development-mini-projects/tree/main/CSS%203D)
 
 ## Demo
-Checkout a demo in with github pages[link](https://eranda-ihalagedara.github.io/vision3d/index.html)
+Checkout a demo in with github pages[link](https://eranda-ihalagedara.github.io/vision3d/index.html).  
 **Note that you would have to grant permission to use webcam**
