@@ -1,0 +1,118 @@
+body{
+    background-color: #d9d9db;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#viewpoint{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 800px;
+    perspective: 1500px;
+    perspective-origin: 50% 50%; 
+    transform-style: preserve-3d; 
+}
+
+/* #viewpoint:not(:hover){
+    animation: resetPosition 1s linear forwards;
+}
+
+@keyframes resetPosition{
+    to { perspective-origin: 50% 50%; }
+} */
+
+.cube{
+    position: relative;
+    transform-style: preserve-3d;
+
+    transform: translate3d(0px, 0px, -200px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* animation: rotation var(--rotationTime) linear infinite; */
+
+    transform: rotate3d(1,1,0,45deg);
+}
+
+@keyframes rotation {
+    from{transform: rotate3d(1,0,1,0deg);}
+    to{transform: rotate3d(1,1,0,360deg);}
+    
+}
+
+.panel{
+    background: #b8bdc2;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    /* border: 1px solid red; */
+    backface-visibility: hidden;
+
+}
+
+.one {
+    transform: translate3d(0px, 0px, 100px);
+    background: #eaeef3;
+}
+
+.two {
+  transform: rotateY(90deg) translate3d(0px, 0px, 100px);
+  background: #b8bdc2;
+  
+}
+
+.three {
+  transform: rotateY(180deg) translate3d(0px, 0px, 100px);
+}
+
+.four {
+    transform: rotateY(270deg) translate3d(0px, 0px, 100px);
+}
+
+.five {
+    transform: rotateX(90deg) translate3d(0px, 0px, 100px);
+}
+
+.six {
+    transform: rotateX(-90deg) translate3d(0px, 0px, 100px);
+    background: #757779;
+}
+
+video {
+    clear: both;
+    display: block;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+.output_canvas {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+.videoView{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+button{
+    color: white;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.404);
+    background-color: rgb(5, 117, 223);
+    border: none;
+    border-radius: 4px;
+    height: 30px;
+    width: 150px;
+    font-size: 14px;
+}

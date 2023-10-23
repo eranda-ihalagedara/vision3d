@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision 3D</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section>
+        <div id="viewpoint">
+            <div class="cube">
+                <div class="panel one"></div>
+                <div class="panel two"></div>
+                <div class="panel three"></div>
+                <div class="panel four"></div>
+                <div class="panel five"></div>
+                <div class="panel six"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-display">
+        <div id="liveView" class="videoView">
+            <button id="webcamButton" class="mdc-button mdc-button--raised">
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__label">ENABLE WEBCAM</span>
+            </button>
+            <div style="position: relative;">
+                <video id="webcam" style="position: abso" autoplay playsinline></video>
+                <canvas class="output_canvas" id="output_canvas" style="position: absolute; left: 0px; top: 0px;"></canvas>
+            </div>
+        </div>
+    </section>
+    
+    <script type="module" src="./scripts/perspective.js"></script>
+
+</body>
+</html>
