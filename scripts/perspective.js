@@ -88,7 +88,6 @@ function enableCam(event) {
     }
 }
 
-
 let lastVideoTime = -1;
 let results = undefined;
 const drawingUtils = new DrawingUtils(canvasCtx);
@@ -100,6 +99,8 @@ const nMovingAvg = 20;
 
 const viewpoint = document.getElementById("viewpoint");
 const canvas = document.getElementById("canvas");
+const persFactX = 1/8;
+const persFactY = 1/4;
 
 async function predictWebcam() {
     const radio = video.videoHeight / video.videoWidth;
@@ -127,8 +128,8 @@ async function predictWebcam() {
             const midX = Math.round(100*(video.videoWidth/2 - video.videoWidth*(landmarks[468].x + landmarks[473].x)/2))/100;
             const midY = Math.round(100*(video.videoHeight*(landmarks[468].y + landmarks[473].y)/2 - video.videoHeight/2))/100;
 
-            viewpoint.style.perspectiveOrigin = `${50+ midX/6}% ${50 + midY/4}%`;
-            canvas.style.perspectiveOrigin = `${50+ midX/6}% ${50 + midY/4}%`;
+            viewpoint.style.perspectiveOrigin = `${50+ midX * persFactX}% ${50 + midY * persFactY}%`;
+            canvas.style.perspectiveOrigin = `${50+ midX * persFactX}% ${50 + midY * persFactY}%`;
             
             // eyeCordDisplay.innerHTML = "X : " +midX + "<br>Y : "+ midY;
         }
