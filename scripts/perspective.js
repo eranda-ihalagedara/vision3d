@@ -98,6 +98,9 @@ let frameTime = performance.now();
 const fpsList = [];
 const nMovingAvg = 20;
 
+const viewpoint = document.getElementById("viewpoint");
+const canvas = document.getElementById("canvas");
+
 async function predictWebcam() {
     const radio = video.videoHeight / video.videoWidth;
     video.style.width = videoWidth + "px";
@@ -125,7 +128,8 @@ async function predictWebcam() {
             const midY = Math.round(100*(video.videoHeight*(landmarks[468].y + landmarks[473].y)/2 - video.videoHeight/2))/100;
 
             viewpoint.style.perspectiveOrigin = `${50+ midX/6}% ${50 + midY/4}%`;
-
+            canvas.style.perspectiveOrigin = `${50+ midX/6}% ${50 + midY/4}%`;
+            
             // eyeCordDisplay.innerHTML = "X : " +midX + "<br>Y : "+ midY;
         }
     }
@@ -153,6 +157,19 @@ async function predictWebcam() {
 // ------------------------------------------------------------
 
 // Get the element with id "output"
-let viewpoint = document.getElementById("viewpoint");
-let panel = document.getElementById("panel");
-// let txt = document.getElementById("mouse_loc");
+const nDots = 1000;
+const spreadX = 5000;
+const spreadY = 2000;
+
+for(let dotId=0; dotId < nDots; dotId++){
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    canvas.insertBefore(dot, viewpoint);
+    
+    const x = Math.floor(Math.random() * spreadX)-spreadX/2;
+    const y = Math.floor(Math.random() * spreadY)-spreadY/2;
+    const z = Math.floor(Math.random() * 1000) + 1000;
+    dot.style.transform = "translate3d("+x+"px,"+y+"px, -"+z+"px)";
+    
+    
+}

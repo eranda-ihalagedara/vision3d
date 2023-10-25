@@ -1,9 +1,26 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
 body{
-    background-color: #d9d9db;
+    /* background-color: #d9d9db; */
+    background-color: #184f83;
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+}
+
+#canvas{
+    height: 500px;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    perspective: 1500px;
+    transform-style: preserve-3d;
+    overflow: hidden;
 }
 
 #viewpoint{
@@ -58,7 +75,7 @@ body{
 
 .one {
     transform: translate3d(0px, 0px, 100px);
-    background: #eaeef3;
+    background: #f4f8fd;
 }
 
 .two {
@@ -81,7 +98,7 @@ body{
 
 .six {
     transform: rotateX(-90deg) translate3d(0px, 0px, 100px);
-    background: #757779;
+    background: #515253;
 }
 
 video {
@@ -98,7 +115,13 @@ video {
     -moz-transform: rotateY(180deg);
 }
 
+.video-display{
+    width: 100%;
+    background-color: white;
+}
+
 .videoView{
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,4 +138,12 @@ button{
     height: 30px;
     width: 150px;
     font-size: 14px;
+}
+
+.dot{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
 }
