@@ -7,7 +7,7 @@ Inital inspiration is from the Mission: Impossible - Ghost Protocol hallway proj
 In summary, the perspective of elements in a webpage is changed based on the position a viewer is looking at, using the webcam.
 
 ## Demo
-Checkout a demo in with github pages : ==[See Demo](https://eranda-ihalagedara.github.io/vision3d/index.html)==  
+Checkout a demo in with github pages : [==See Demo==](https://eranda-ihalagedara.github.io/vision3d/index.html)==  
 **Note that you would have to grant permission to use webcam**
 
 ## Eye Tracking : [MediaPipe](https://developers.google.com/mediapipe)
